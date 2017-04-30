@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.dao.impl;
 
+
 import by.bsuir.jobproject.dao.CrudDAO;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.model.Employer;
@@ -12,9 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- * Created by NotePad.by on 30.04.2017.
- */
+
 public class EmployerDAOImpl extends MySQLConnector implements CrudDAO<Employer> {
 
     private final String INSERT_EMPLOYER = "insert into employer (id_user, employer_name, employer_information) values (?,?,?)";

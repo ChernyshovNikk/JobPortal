@@ -26,7 +26,9 @@
             <td><p style="color: red;">${errorString}</p>
     </table>
 </form>
-Not a member?
+
+<p>Not a member?</p>
+
 <form method="post" action="${pageContext.request.contextPath}/controller">
     <input type="hidden" name="command" value="to_register">
 </form>

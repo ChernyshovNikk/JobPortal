@@ -1,8 +1,6 @@
 package by.bsuir.jobproject.exception;
 
-/**
- * Created by AR on 21.03.2017.
- */
+
 public class DAOException extends RuntimeException {
 
     public DAOException(String message) {

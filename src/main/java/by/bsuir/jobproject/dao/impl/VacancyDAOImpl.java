@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.dao.impl;
 
+
 import by.bsuir.jobproject.dao.CrudDAO;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.model.Vacancy;
@@ -12,9 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- * Created by AR on 25.04.2017.
- */
+
 public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
 
     private final String INSERT_VACANCY = "insert into vacancy (id_company, vacancy_name, vacancy_requirements, vacancy_payment) values (?,?,?,?)";

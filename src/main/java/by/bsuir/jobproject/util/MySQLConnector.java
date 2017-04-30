@@ -1,7 +1,5 @@
 package by.bsuir.jobproject.util;
-/**
- * Created by AR on 12.03.2017.
- */
+
 
 import by.bsuir.jobproject.exception.DAOException;
 
@@ -11,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+
 
 public abstract class MySQLConnector {
 

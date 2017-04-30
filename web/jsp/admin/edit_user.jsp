@@ -28,11 +28,31 @@
     </h2>
 
     <table border="1" cellpadding="7" cellspacing="1">
-        <tr><td>User ID:</td><td><input name="user_id" type="text" class="form-control" value="<c:out value="${user.user_id}"/>" readonly="readonly"/></td><tr>
-        <tr><td>User Login:</td><td><input name="user_login" type="text" class="form-control" value="<c:out value="${user.user_login}"/>"/></td><tr>
-        <tr><td>User Password:</td><td><input name="user_password" type="password" class="form-control" value="<c:out value="${user.user_password}"/>"/></td><tr>
-        <tr><td>User Email:</td><td><input name="user_email" type="text" class="form-control" value="<c:out value="${user.user_email}"/>"/></td><tr>
-        <tr><td>User Status:</td><td><input name="user_status" type="text" class="form-control" value="<c:out value="${user.user_status}"/>"/></td><tr>
+        <tr>
+            <td>User ID:</td>
+            <td><input name="user_id" type="text" class="form-control" value="<c:out value="${user.user_id}"/>"
+                       readonly="readonly"/></td>
+        <tr>
+        <tr>
+            <td>User Login:</td>
+            <td><input name="user_login" type="text" class="form-control" value="<c:out value="${user.user_login}"/>"/>
+            </td>
+        <tr>
+        <tr>
+            <td>User Password:</td>
+            <td><input name="user_password" type="password" class="form-control"
+                       value="<c:out value="${user.user_password}"/>"/></td>
+        <tr>
+        <tr>
+            <td>User Email:</td>
+            <td><input name="user_email" type="text" class="form-control" value="<c:out value="${user.user_email}"/>"/>
+            </td>
+        <tr>
+        <tr>
+            <td>User Status:</td>
+            <td><input name="user_status" type="text" class="form-control"
+                       value="<c:out value="${user.user_status}"/>"/></td>
+        <tr>
     </table>
 
     <c:if test="${user != null}">

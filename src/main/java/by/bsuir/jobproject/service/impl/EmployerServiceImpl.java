@@ -1,7 +1,7 @@
 package by.bsuir.jobproject.service.impl;
 
+
 import by.bsuir.jobproject.dao.impl.EmployerDAOImpl;
-import by.bsuir.jobproject.dao.impl.UserDAOImpl;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.exception.ServiceException;
 import by.bsuir.jobproject.model.Employer;
@@ -9,9 +9,7 @@ import by.bsuir.jobproject.service.Service;
 
 import java.util.ArrayList;
 
-/**
- * Created by NotePad.by on 30.04.2017.
- */
+
 public class EmployerServiceImpl implements Service<Employer> {
 
     private EmployerDAOImpl employerDAO = new EmployerDAOImpl();

@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.command.impl.vacancy;
 
+
 import by.bsuir.jobproject.command.ActionCommand;
 import by.bsuir.jobproject.exception.CommandException;
 import by.bsuir.jobproject.exception.ServiceException;
@@ -10,9 +11,7 @@ import by.bsuir.jobproject.util.ConfigurationManager;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 
-/**
- * Created by AR on 29.04.2017.
- */
+
 public class ReadAllVacanciesCommand implements ActionCommand {
 
     @Override

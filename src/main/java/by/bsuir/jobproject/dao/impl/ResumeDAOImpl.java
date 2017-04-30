@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.dao.impl;
 
+
 import by.bsuir.jobproject.dao.CrudDAO;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.model.Resume;
@@ -12,9 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- * Created by NotePad.by on 30.04.2017.
- */
+
 public class ResumeDAOImpl extends MySQLConnector implements CrudDAO<Resume> {
 
     private final String INSERT_RESUME = "insert into resume (id_jobseeker, id_specialty, id_skill, resume_information) values (?,?,?,?)";

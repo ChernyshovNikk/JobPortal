@@ -28,10 +28,26 @@
     </h2>
 
     <table border="1" cellpadding="7" cellspacing="1">
-        <tr><td>Employer ID:</td><td><input name="employer_id" type="text" class="form-control" value="<c:out value="${employer.employer_id}"/>" readonly="readonly"/></td><tr>
-        <tr><td>User ID:</td><td><input name="user_id" type="text" class="form-control" value="<c:out value="${employer.user_id}"/>"/></td><tr>
-        <tr><td>Employer Name:</td><td><input name="employer_name" type="text" class="form-control" value="<c:out value="${employer.employer_name}"/>"/></td><tr>
-        <tr><td>Employer Information:</td><td><input name="employer_information" type="text" class="form-control" value="<c:out value="${employer.employer_information}"/>"/></td><tr>
+        <tr>
+            <td>Employer ID:</td>
+            <td><input name="employer_id" type="text" class="form-control"
+                       value="<c:out value="${employer.employer_id}"/>" readonly="readonly"/></td>
+        <tr>
+        <tr>
+            <td>User ID:</td>
+            <td><input name="user_id" type="text" class="form-control" value="<c:out value="${employer.user_id}"/>"/>
+            </td>
+        <tr>
+        <tr>
+            <td>Employer Name:</td>
+            <td><input name="employer_name" type="text" class="form-control"
+                       value="<c:out value="${employer.employer_name}"/>"/></td>
+        <tr>
+        <tr>
+            <td>Employer Information:</td>
+            <td><input name="employer_information" type="text" class="form-control"
+                       value="<c:out value="${employer.employer_information}"/>"/></td>
+        <tr>
     </table>
 
     <c:if test="${employer != null}">

@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.service.impl;
 
+
 import by.bsuir.jobproject.dao.impl.ResumeDAOImpl;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.exception.ServiceException;
@@ -7,11 +8,7 @@ import by.bsuir.jobproject.model.Resume;
 import by.bsuir.jobproject.service.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by NotePad.by on 30.04.2017.
- */
 
 public class ResumeServiceImpl implements Service<Resume> {
 

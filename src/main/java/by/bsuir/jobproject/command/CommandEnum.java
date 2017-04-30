@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.command;
 
+
 import by.bsuir.jobproject.command.impl.*;
 import by.bsuir.jobproject.command.impl.employer.*;
 import by.bsuir.jobproject.command.impl.resume.*;
@@ -9,9 +10,7 @@ import by.bsuir.jobproject.command.impl.vacancy.DeleteVacancyCommand;
 import by.bsuir.jobproject.command.impl.vacancy.ReadAllVacanciesCommand;
 import by.bsuir.jobproject.command.impl.vacancy.UpdateVacancyCommand;
 
-/**
- * Created by AR on 29.04.2017.
- */
+
 public enum CommandEnum {
 
     TO_LOGIN {

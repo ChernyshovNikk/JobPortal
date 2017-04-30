@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.service.impl;
 
+
 import by.bsuir.jobproject.dao.impl.VacancyDAOImpl;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.exception.ServiceException;
@@ -8,9 +9,7 @@ import by.bsuir.jobproject.service.Service;
 
 import java.util.ArrayList;
 
-/**
- * Created by AR on 29.04.2017.
- */
+
 public class VacancyServiceImpl implements Service<Vacancy> {
 
     private VacancyDAOImpl vacancyDAO = new VacancyDAOImpl();

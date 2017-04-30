@@ -1,13 +1,11 @@
 package by.bsuir.jobproject.service;
 
+
 import by.bsuir.jobproject.exception.ServiceException;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by AR on 29.03.2017.
- */
+
 public interface Service<T> {
     ArrayList<T> getAllEntities() throws ServiceException;
 
