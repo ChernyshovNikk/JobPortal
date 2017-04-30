@@ -15,9 +15,9 @@
     |
     <a href="controller?command=view_resumes">Resumes</a>
     |
-    <a href="${pageContext.request.contextPath}/jsp/register.jsp">Registration</a>
+    <a href="controller?command=to_register">Registration</a>
     |
-    <a href="jsp/login.jsp">Login</a>
+    <a href="controller?command=to_login">Login</a>
     |
     <a href="controller?command=logout">LogOut</a>
 
