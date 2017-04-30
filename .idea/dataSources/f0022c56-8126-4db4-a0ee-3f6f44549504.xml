@@ -6,414 +6,411 @@
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <schema id="3" parent="1" name="information_schema"/>
-    <schema id="4" parent="1" name="jobproject"/>
+    <schema id="3" parent="1" name="db"/>
+    <schema id="4" parent="1" name="information_schema"/>
     <schema id="5" parent="1" name="mydb"/>
     <schema id="6" parent="1" name="mysql"/>
-    <schema id="7" parent="1" name="performance_schema"/>
-    <schema id="8" parent="1" name="placards"/>
-    <schema id="9" parent="1" name="sakila"/>
-    <schema id="10" parent="1" name="sys"/>
-    <schema id="11" parent="1" name="tourcompany"/>
-    <schema id="12" parent="1" name="world"/>
-    <table id="13" parent="2" name="application"/>
-    <table id="14" parent="2" name="employer"/>
-    <table id="15" parent="2" name="jobseeker"/>
-    <table id="16" parent="2" name="resume"/>
-    <table id="17" parent="2" name="skill"/>
-    <table id="18" parent="2" name="specialty"/>
-    <table id="19" parent="2" name="user"/>
-    <table id="20" parent="2" name="vacancy"/>
-    <column id="21" parent="13" name="id_application">
+    <schema id="7" parent="1" name="new_schema"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="sys"/>
+    <table id="10" parent="2" name="application"/>
+    <table id="11" parent="2" name="employer"/>
+    <table id="12" parent="2" name="jobseeker"/>
+    <table id="13" parent="2" name="resume"/>
+    <table id="14" parent="2" name="skill"/>
+    <table id="15" parent="2" name="specialty"/>
+    <table id="16" parent="2" name="user"/>
+    <table id="17" parent="2" name="vacancy"/>
+    <column id="18" parent="10" name="id_application">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="22" parent="13" name="id_jobseeker">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="23" parent="13" name="id_employer">
-      <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="24" parent="13" name="id_vacancy">
+    <column id="19" parent="10" name="id_vacancy">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="25" parent="13" name="fk_application_employer_idx">
-      <ColNames>id_employer</ColNames>
-    </index>
-    <index id="26" parent="13" name="fk_application_jobseeker_idx">
-      <ColNames>id_jobseeker</ColNames>
-    </index>
-    <index id="27" parent="13" name="fk_application_vacancy_idx">
+    <column id="20" parent="10" name="id_jobseeker">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="10" name="id_employer">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="22" parent="10" name="fk_application_vacancy_idx">
       <ColNames>id_vacancy</ColNames>
     </index>
-    <index id="28" parent="13" name="id_application_UNIQUE">
+    <index id="23" parent="10" name="id_application_UNIQUE">
       <ColNames>id_application</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="29" parent="13" name="PRIMARY">
+    <index id="24" parent="10" name="fk_application_employer_idx">
+      <ColNames>id_employer</ColNames>
+    </index>
+    <index id="25" parent="10" name="fk_application_jobseeker_idx">
+      <ColNames>id_jobseeker</ColNames>
+    </index>
+    <key id="26" parent="10" name="PRIMARY">
       <ColNames>id_application</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="30" parent="13" name="id_application_UNIQUE">
+    <key id="27" parent="10" name="id_application_UNIQUE">
       <ColNames>id_application</ColNames>
       <UnderlyingIndexName>id_application_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="31" parent="13" name="fk_application_jobseeker">
+    <foreign-key id="28" parent="10" name="fk_application_jobseeker">
       <ColNames>id_jobseeker</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>jobseeker</RefTableName>
       <RefColNames>id_jobseeker</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <foreign-key id="32" parent="13" name="fk_application_employer">
+    <foreign-key id="29" parent="10" name="fk_application_employer">
       <ColNames>id_employer</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>employer</RefTableName>
       <RefColNames>id_employer</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <foreign-key id="33" parent="13" name="fk_application_vacancy">
+    <foreign-key id="30" parent="10" name="fk_application_vacancy">
       <ColNames>id_vacancy</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>vacancy</RefTableName>
       <RefColNames>id_vacancy</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <column id="34" parent="14" name="id_employer">
+    <column id="31" parent="11" name="id_employer">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="35" parent="14" name="id_user">
+    <column id="32" parent="11" name="id_user">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="14" name="employer_name">
+    <column id="33" parent="11" name="employer_name">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="14" name="employer_information">
+    <column id="34" parent="11" name="employer_information">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="38" parent="14" name="employer_name_UNIQUE">
+    <index id="35" parent="11" name="employer_name_UNIQUE">
       <ColNames>employer_name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="39" parent="14" name="id_employer_UNIQUE">
+    <index id="36" parent="11" name="id_employer_UNIQUE">
       <ColNames>id_employer</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="40" parent="14" name="id_user_UNIQUE">
+    <index id="37" parent="11" name="id_user_UNIQUE">
       <ColNames>id_user</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="14" name="PRIMARY">
+    <key id="38" parent="11" name="PRIMARY">
       <ColNames>id_employer</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="42" parent="14" name="id_employer_UNIQUE">
+    <key id="39" parent="11" name="id_employer_UNIQUE">
       <ColNames>id_employer</ColNames>
       <UnderlyingIndexName>id_employer_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="43" parent="14" name="id_user_UNIQUE">
+    <key id="40" parent="11" name="id_user_UNIQUE">
       <ColNames>id_user</ColNames>
       <UnderlyingIndexName>id_user_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="44" parent="14" name="employer_name_UNIQUE">
+    <key id="41" parent="11" name="employer_name_UNIQUE">
       <ColNames>employer_name</ColNames>
       <UnderlyingIndexName>employer_name_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="45" parent="14" name="fk_employer_user">
+    <foreign-key id="42" parent="11" name="fk_employer_user">
       <ColNames>id_user</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id_user</RefColNames>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="46" parent="15" name="id_jobseeker">
+    <column id="43" parent="12" name="id_jobseeker">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="47" parent="15" name="id_user">
+    <column id="44" parent="12" name="id_user">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="15" name="jobseeker_lastname">
+    <column id="45" parent="12" name="jobseeker_lastname">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="15" name="jobseeker_name">
+    <column id="46" parent="12" name="jobseeker_name">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="15" name="jobseeker_status">
+    <column id="47" parent="12" name="jobseeker_status">
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="51" parent="15" name="id_jobseeker_UNIQUE">
+    <index id="48" parent="12" name="id_jobseeker_UNIQUE">
       <ColNames>id_jobseeker</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="52" parent="15" name="id_user_UNIQUE">
+    <index id="49" parent="12" name="id_user_UNIQUE">
       <ColNames>id_user</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="53" parent="15" name="PRIMARY">
+    <key id="50" parent="12" name="PRIMARY">
       <ColNames>id_jobseeker</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="54" parent="15" name="id_jobseeker_UNIQUE">
+    <key id="51" parent="12" name="id_jobseeker_UNIQUE">
       <ColNames>id_jobseeker</ColNames>
       <UnderlyingIndexName>id_jobseeker_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="55" parent="15" name="id_user_UNIQUE">
+    <key id="52" parent="12" name="id_user_UNIQUE">
       <ColNames>id_user</ColNames>
       <UnderlyingIndexName>id_user_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="56" parent="15" name="fk_jobseeker_user">
+    <foreign-key id="53" parent="12" name="fk_jobseeker_user">
       <ColNames>id_user</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id_user</RefColNames>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="57" parent="16" name="id_resume">
+    <column id="54" parent="13" name="id_resume">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="58" parent="16" name="id_jobseeker">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="59" parent="16" name="id_specialty">
+    <column id="55" parent="13" name="id_specialty">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="16" name="id_skill">
+    <column id="56" parent="13" name="id_skill">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="16" name="resume_information">
+    <column id="57" parent="13" name="resume_information">
       <Position>5</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="62" parent="16" name="fk_resume_jobseeker_idx">
-      <ColNames>id_jobseeker</ColNames>
-    </index>
-    <index id="63" parent="16" name="fk_resume_skill_idx">
+    <column id="58" parent="13" name="id_jobseeker">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="59" parent="13" name="fk_resume_skill_idx">
       <ColNames>id_skill</ColNames>
     </index>
-    <index id="64" parent="16" name="fk_resume_specialty_idx">
+    <index id="60" parent="13" name="fk_resume_specialty_idx">
       <ColNames>id_specialty</ColNames>
     </index>
-    <index id="65" parent="16" name="id_resume_UNIQUE">
+    <index id="61" parent="13" name="id_resume_UNIQUE">
       <ColNames>id_resume</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="66" parent="16" name="PRIMARY">
+    <index id="62" parent="13" name="fk_resume_jobseeker_idx">
+      <ColNames>id_jobseeker</ColNames>
+    </index>
+    <key id="63" parent="13" name="PRIMARY">
       <ColNames>id_resume</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="67" parent="16" name="id_resume_UNIQUE">
+    <key id="64" parent="13" name="id_resume_UNIQUE">
       <ColNames>id_resume</ColNames>
       <UnderlyingIndexName>id_resume_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="68" parent="16" name="fk_resume_jobseeker">
+    <foreign-key id="65" parent="13" name="fk_resume_jobseeker">
       <ColNames>id_jobseeker</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>jobseeker</RefTableName>
       <RefColNames>id_jobseeker</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <foreign-key id="69" parent="16" name="fk_resume_specialty">
+    <foreign-key id="66" parent="13" name="fk_resume_specialty">
       <ColNames>id_specialty</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>specialty</RefTableName>
       <RefColNames>id_specialty</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <foreign-key id="70" parent="16" name="fk_resume_skill">
+    <foreign-key id="67" parent="13" name="fk_resume_skill">
       <ColNames>id_skill</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>skill</RefTableName>
       <RefColNames>id_skill</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <column id="71" parent="17" name="id_skill">
+    <column id="68" parent="14" name="id_skill">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="72" parent="17" name="skill_name">
+    <column id="69" parent="14" name="skill_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="73" parent="17" name="id_skill">
+    <index id="70" parent="14" name="id_skill">
       <ColNames>id_skill</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="74" parent="17" name="skill_name_UNIQUE">
+    <index id="71" parent="14" name="skill_name_UNIQUE">
       <ColNames>skill_name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="75" parent="17" name="PRIMARY">
+    <key id="72" parent="14" name="PRIMARY">
       <ColNames>id_skill</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="76" parent="17" name="id_skill">
+    <key id="73" parent="14" name="id_skill">
       <ColNames>id_skill</ColNames>
       <UnderlyingIndexName>id_skill</UnderlyingIndexName>
     </key>
-    <key id="77" parent="17" name="skill_name_UNIQUE">
+    <key id="74" parent="14" name="skill_name_UNIQUE">
       <ColNames>skill_name</ColNames>
       <UnderlyingIndexName>skill_name_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="78" parent="18" name="id_specialty">
+    <column id="75" parent="15" name="id_specialty">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="79" parent="18" name="specialty_name">
+    <column id="76" parent="15" name="specialty_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="80" parent="18" name="id_specialty_UNIQUE">
+    <index id="77" parent="15" name="id_specialty_UNIQUE">
       <ColNames>id_specialty</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="81" parent="18" name="PRIMARY">
+    <key id="78" parent="15" name="PRIMARY">
       <ColNames>id_specialty</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="82" parent="18" name="id_specialty_UNIQUE">
+    <key id="79" parent="15" name="id_specialty_UNIQUE">
       <ColNames>id_specialty</ColNames>
       <UnderlyingIndexName>id_specialty_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="83" parent="19" name="id_user">
+    <column id="80" parent="16" name="id_user">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="84" parent="19" name="user_login">
+    <column id="81" parent="16" name="user_login">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="85" parent="19" name="user_password">
+    <column id="82" parent="16" name="user_password">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="86" parent="19" name="user_email">
+    <column id="83" parent="16" name="user_email">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="87" parent="19" name="user_status">
+    <column id="84" parent="16" name="user_status">
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="88" parent="19" name="id_user_UNIQUE">
+    <index id="85" parent="16" name="id_user_UNIQUE">
       <ColNames>id_user</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="89" parent="19" name="user_email_UNIQUE">
+    <index id="86" parent="16" name="user_email_UNIQUE">
       <ColNames>user_email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="90" parent="19" name="user_login_UNIQUE">
+    <index id="87" parent="16" name="user_login_UNIQUE">
       <ColNames>user_login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="91" parent="19" name="PRIMARY">
+    <key id="88" parent="16" name="PRIMARY">
       <ColNames>id_user</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="92" parent="19" name="id_user_UNIQUE">
+    <key id="89" parent="16" name="id_user_UNIQUE">
       <ColNames>id_user</ColNames>
       <UnderlyingIndexName>id_user_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="93" parent="19" name="user_login_UNIQUE">
+    <key id="90" parent="16" name="user_login_UNIQUE">
       <ColNames>user_login</ColNames>
       <UnderlyingIndexName>user_login_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="94" parent="19" name="user_email_UNIQUE">
+    <key id="91" parent="16" name="user_email_UNIQUE">
       <ColNames>user_email</ColNames>
       <UnderlyingIndexName>user_email_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="95" parent="20" name="id_vacancy">
+    <column id="92" parent="17" name="id_vacancy">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="96" parent="20" name="id_employer">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="97" parent="20" name="vacancy_name">
+    <column id="93" parent="17" name="vacancy_name">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="98" parent="20" name="vacancy_requirements">
+    <column id="94" parent="17" name="vacancy_requirements">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="99" parent="20" name="vacancy_payment">
+    <column id="95" parent="17" name="vacancy_payment">
       <Position>5</Position>
       <DataType>decimal(10,2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="100" parent="20" name="fk_vacancy_employer_idx">
-      <ColNames>id_employer</ColNames>
-    </index>
-    <index id="101" parent="20" name="id_vacancy_UNIQUE">
+    <column id="96" parent="17" name="id_employer">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="97" parent="17" name="id_vacancy_UNIQUE">
       <ColNames>id_vacancy</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="102" parent="20" name="PRIMARY">
+    <index id="98" parent="17" name="fk_vacancy_employer_idx">
+      <ColNames>id_employer</ColNames>
+    </index>
+    <key id="99" parent="17" name="PRIMARY">
       <ColNames>id_vacancy</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="103" parent="20" name="id_vacancy_UNIQUE">
+    <key id="100" parent="17" name="id_vacancy_UNIQUE">
       <ColNames>id_vacancy</ColNames>
       <UnderlyingIndexName>id_vacancy_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="104" parent="20" name="fk_vacancy_employer">
+    <foreign-key id="101" parent="17" name="fk_vacancy_employer">
       <ColNames>id_employer</ColNames>
       <RefSchemaName>job_portal</RefSchemaName>
       <RefTableName>employer</RefTableName>

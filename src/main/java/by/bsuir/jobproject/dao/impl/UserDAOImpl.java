@@ -21,6 +21,7 @@ public class UserDAOImpl extends MySQLConnector implements UserDAO {
     private final String UPDATE_USER = "update user set user_login=?, user_password=?, user_email=?, user_status=? where id_user=?";
     private final String SELECT_ALL_USERS = "select id_user, user_login, user_password, user_email, user_status from user";
     private final String SELECT_USER_BY_ID = "select id_user, user_login, user_password, user_email, user_status from user where id_user=?";
+    private final String SELECT_USER_ID_BY_LOGIN = "select id_user from user where user_login=?";
     private final String AUTHENTICATION = "select * from user where user_login = ? and user_password =?";
 
     @Override
@@ -205,5 +206,34 @@ public class UserDAOImpl extends MySQLConnector implements UserDAO {
         return user;
     }
 
+    public int getUserIdByLogin(String user_login) {
+        int userId = 0;
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = getConnection().prepareStatement(SELECT_USER_ID_BY_LOGIN);
+            preparedStatement.setString(1, user_login);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                userId = resultSet.getInt(ConfigurationManager.getProperty("USER_ID"));
+            }
+
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            try {
+                if (resultSet != null)
+                    resultSet.close();
+                if (preparedStatement != null)
+                    preparedStatement.close();
+                //  closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return userId;
+    }
 }
 

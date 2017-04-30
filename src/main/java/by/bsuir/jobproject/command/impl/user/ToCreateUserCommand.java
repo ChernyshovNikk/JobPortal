@@ -11,8 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ToCreateUserCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) throws CommandException {
-        String page = null;
-        page = ConfigurationManager.getProperty("path.page.add_user");
+        String page = ConfigurationManager.getProperty("path.page.add_user");
 
         return page;
     }

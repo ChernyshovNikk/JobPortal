@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 public class DeleteUserCommand implements ActionCommand {
-    //TODO переход
+    
     @Override
     public String execute(HttpServletRequest request) throws CommandException {
         String page = ConfigurationManager.getProperty("path.page.users");

@@ -24,18 +24,18 @@
     </thead>
 
     <tbody>
-    <c:forEach items="${users}" var="user">
+    <c:forEach items="${users}" var="jobseeker">
         <tr>
-            <td><c:out value="${user.user_id}"/></td>
-            <td><c:out value="${user.user_login}"/></td>
-            <td><c:out value="${user.user_password}"/></td>
-            <td><c:out value="${user.user_email}"/></td>
-            <td><c:out value="${user.user_status}"/></td>
+            <td><c:out value="${jobseeker.user_id}"/></td>
+            <td><c:out value="${jobseeker.user_login}"/></td>
+            <td><c:out value="${jobseeker.user_password}"/></td>
+            <td><c:out value="${jobseeker.user_email}"/></td>
+            <td><c:out value="${jobseeker.user_status}"/></td>
 
             <td>
                 <form action="${pageContext.request.contextPath}/controller" method="POST">
                     <input type="hidden" name="command" value="to_update_user">
-                    <input type="hidden" name="user_id" value="${user.user_id}">
+                    <input type="hidden" name="user_id" value="${jobseeker.user_id}">
                     <input value="Update" type="submit">
                 </form>
             </td>
@@ -43,7 +43,7 @@
             <td>
                 <form action="${pageContext.request.contextPath}/controller" method="POST">
                     <input type="hidden" name="command" value="delete_user">
-                    <input type="hidden" name="user_id" value="${user.user_id}">
+                    <input type="hidden" name="user_id" value="${jobseeker.user_id}">
                     <input value="Delete" type="submit">
                 </form>
             </td>
