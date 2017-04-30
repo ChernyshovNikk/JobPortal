@@ -35,8 +35,12 @@
         <tr><td>User Status:</td><td><input name="user_status" type="text" class="form-control" value="<c:out value="${user.user_status}"/>"/></td><tr>
     </table>
 
-    <input type="hidden" name="command" value="create_user">
-    <input value="Add User" type="submit">
+    <c:if test="${user != null}">
+        <input value="Edit" type="submit">
+    </c:if>
+    <c:if test="${user == null}">
+        <input value="Add" type="submit">
+    </c:if>
 </form>
 
 <jsp:include page="/jsp/common/_footer.jsp"></jsp:include>
