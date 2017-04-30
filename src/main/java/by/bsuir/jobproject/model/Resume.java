@@ -6,42 +6,42 @@ import java.io.Serializable;
  * Created by AR on 19.03.2017.
  */
 public class Resume implements Serializable{
-    private int id_resume;
-    private int id_user;
-    private int id_specialty;
-    private int id_skill;
+    private int resume_id;
+    private int jobseeker_id;
+    private int specialty_id;
+    private int skill_id;
     private String resume_information;
 
-    public int getId_resume() {
-        return id_resume;
+    public int getResume_id() {
+        return resume_id;
     }
 
-    public void setId_resume(int id_resume) {
-        this.id_resume = id_resume;
+    public void setResume_id(int resume_id) {
+        this.resume_id = resume_id;
     }
 
-    public int getId_user() {
-        return id_user;
+    public int getJobseeker_id() {
+        return jobseeker_id;
     }
 
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
+    public void setJobseeker_id(int jobseeker_id) {
+        this.jobseeker_id = jobseeker_id;
     }
 
-    public int getId_specialty() {
-        return id_specialty;
+    public int getSpecialty_id() {
+        return specialty_id;
     }
 
-    public void setId_specialty(int id_specialty) {
-        this.id_specialty = id_specialty;
+    public void setSpecialty_id(int specialty_id) {
+        this.specialty_id = specialty_id;
     }
 
-    public int getId_skill() {
-        return id_skill;
+    public int getSkill_id() {
+        return skill_id;
     }
 
-    public void setId_skill(int id_skill) {
-        this.id_skill = id_skill;
+    public void setSkill_id(int skill_id) {
+        this.skill_id = skill_id;
     }
 
     public String getResume_information() {

@@ -1,6 +1,7 @@
 package by.bsuir.jobproject.command;
 
 import by.bsuir.jobproject.command.impl.*;
+import by.bsuir.jobproject.command.impl.resume.*;
 import by.bsuir.jobproject.command.impl.user.*;
 import by.bsuir.jobproject.command.impl.vacancy.CreateVacancyCommand;
 import by.bsuir.jobproject.command.impl.vacancy.DeleteVacancyCommand;
@@ -97,6 +98,38 @@ public enum CommandEnum {
     DELETE_VACANCY {
         {
             this.command = new DeleteVacancyCommand();
+        }
+    },
+
+
+    VIEW_RESUMES {
+        {
+            this.command = new ResumeListCommand();
+        }
+    },
+    CREATE_RESUME {
+        {
+            this.command = new CreateResumeCommand();
+        }
+    },
+    UPDATE_RESUME {
+        {
+            this.command = new UpdateResumeCommand();
+        }
+    },
+    DELETE_RESUME {
+        {
+            this.command = new DeleteResumeCommand();
+        }
+    },
+    TO_CREATE_RESUME {
+        {
+            this.command = new ToCreateResumeCommand();
+        }
+    },
+    TO_UPDATE_RESUME {
+        {
+            this.command = new ToUpdateResumeCommand();
         }
     };
 
