@@ -17,18 +17,18 @@ import java.util.ArrayList;
  */
 public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
 
-    private final String INSERT_VACANCY = "insert into vacancy (id_company, vacancy_name, vacancy_requirements, vacancy_payment) values (?,?,?,?)";
+    private final String INSERT_VACANCY = "insert into vacancy (id_employer, vacancy_name, vacancy_requirements, vacancy_payment) values (?,?,?,?)";
     private final String DELETE_VACANCY_BY_ID = "delete from vacancy where id_vacancy=?";
-    private final String UPDATE_VACANCY = "update user set user_login=?, user_password=?, user_email=?, user_status=? where id_user=?";
-    private final String SELECT_ALL_VACANCIES = "select id_user, user_login, user_password, user_email, user_status from user";
-    private final String SELECT_VACANCY_BY_ID = "select id_user, user_login, user_password, user_email, user_status from user where id_user=?";
+    private final String UPDATE_VACANCY = "update vacancy set id_employer=?, vacancy_name=?, vacancy_requirements=?, vacancy_payment=? where id_vacancy=?";
+    private final String SELECT_ALL_VACANCIES = "select id_vacancy, id_employer, vacancy_name, vacancy_requirements, vacancy_payment from vacancy";
+    private final String SELECT_VACANCY_BY_ID = "select id_vacancy, id_employer, vacancy_name, vacancy_requirements, vacancy_payment from vacancy where id_vacancy=?";
 
     @Override
     public void addEntity(Vacancy vacancy) throws DAOException {
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = getConnection().prepareStatement(INSERT_VACANCY);
-            preparedStatement.setInt(1, vacancy.getCompany_id());
+            preparedStatement.setInt(1, vacancy.getEmployer_id());
             preparedStatement.setString(2, vacancy.getVacancy_name());
             preparedStatement.setString(3, vacancy.getVacancy_requirements());
             preparedStatement.setString(4, vacancy.getVacancy_payment());
@@ -77,7 +77,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
         try {
             preparedStatement = getConnection().prepareStatement(UPDATE_VACANCY);
 
-            preparedStatement.setInt(1, vacancy.getCompany_id());
+            preparedStatement.setInt(1, vacancy.getEmployer_id());
             preparedStatement.setString(2, vacancy.getVacancy_name());
             preparedStatement.setString(3, vacancy.getVacancy_requirements());
             preparedStatement.setString(4, vacancy.getVacancy_payment());
@@ -99,7 +99,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
 
     @Override
     public ArrayList<Vacancy> getAllEntities() throws DAOException {
-        ArrayList<Vacancy> vacancies = new ArrayList<Vacancy>();
+        ArrayList<Vacancy> vacancies = new ArrayList<>();
 
         ResultSet resultSet = null;
         Statement statement = null;
@@ -109,6 +109,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
             while (resultSet.next()) {
                 Vacancy vacancy = new Vacancy();
                 vacancy.setVacancy_id(resultSet.getInt(ConfigurationManager.getProperty("VACANCY_ID")));
+                vacancy.setEmployer_id(resultSet.getInt(ConfigurationManager.getProperty("EMPLOYER_ID")));
                 vacancy.setVacancy_name(resultSet.getString(ConfigurationManager.getProperty("VACANCY_NAME")));
                 vacancy.setVacancy_requirements(resultSet.getString(ConfigurationManager.getProperty("VACANCY_REQUIREMENTS")));
                 vacancy.setVacancy_payment(resultSet.getString(ConfigurationManager.getProperty("VACANCY_PAYMENT")));
@@ -143,6 +144,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
 
             if (resultSet.next()) {
                 vacancy.setVacancy_id(resultSet.getInt(ConfigurationManager.getProperty("VACANCY_ID")));
+                vacancy.setEmployer_id(resultSet.getInt(ConfigurationManager.getProperty("EMPLOYER_ID")));
                 vacancy.setVacancy_name(resultSet.getString(ConfigurationManager.getProperty("VACANCY_NAME")));
                 vacancy.setVacancy_requirements(resultSet.getString(ConfigurationManager.getProperty("VACANCY_REQUIREMENTS")));
                 vacancy.setVacancy_payment(resultSet.getString(ConfigurationManager.getProperty("VACANCY_PAYMENT")));

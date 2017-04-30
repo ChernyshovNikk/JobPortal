@@ -20,7 +20,7 @@
     <thead>
     <tr>
         <th>Vacancy ID</th>
-        <th>Vacancy Company ID</th>
+        <th>Vacancy Employer ID</th>
         <th>Vacancy Name</th>
         <th>Vacancy Requirement</th>
         <th>Vacancy Payment</th>
@@ -33,9 +33,9 @@
     <c:forEach items="${vacancies}" var="vacancy">
         <tr>
             <td><c:out value="${vacancy.vacancy_id}"/></td>
-            <td><c:out value="${vacancy.company_id}"/></td>
+            <td><c:out value="${vacancy.employer_id}"/></td>
             <td><c:out value="${vacancy.vacancy_name}"/></td>
-            <td><c:out value="${vacancy.vacancy_requirement}"/></td>
+            <td><c:out value="${vacancy.vacancy_requirements}"/></td>
             <td><c:out value="${vacancy.vacancy_payment}"/></td>
 
             <td>

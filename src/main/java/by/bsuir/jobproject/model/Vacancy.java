@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class Vacancy implements Serializable {
 
     private int vacancy_id;
-    private int company_id;
+    private int employer_id;
     private String vacancy_name;
     private String vacancy_requirements;
     private String vacancy_payment;
@@ -21,12 +21,12 @@ public class Vacancy implements Serializable {
         this.vacancy_id = vacancy_id;
     }
 
-    public int getCompany_id() {
-        return company_id;
+    public int getEmployer_id() {
+        return employer_id;
     }
 
-    public void setCompany_id(int company_id) {
-        this.company_id = company_id;
+    public void setEmployer_id(int employer_id) {
+        this.employer_id = employer_id;
     }
 
     public String getVacancy_name() {

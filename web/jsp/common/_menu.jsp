@@ -7,6 +7,8 @@
     |
     <a href="controller?command=view_users">Users</a>
     |
+    <a href="controller?command=view_vacancies">Vacancies</a>
+    |
     <a href="${pageContext.request.contextPath}/jsp/register.jsp">Registration</a>
     |
     <a href="jsp/login.jsp">Login</a>

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 /**
  * Created by AR on 29.04.2017.
  */
-public class ReadAllVacanciesCommand implements ActionCommand {
+public class VacancyListCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws CommandException {
@@ -26,7 +26,6 @@ public class ReadAllVacanciesCommand implements ActionCommand {
         } catch (ServiceException e) {
             e.printStackTrace();
         }
-
         return page;
     }
 }

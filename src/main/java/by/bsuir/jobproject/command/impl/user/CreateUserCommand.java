@@ -21,14 +21,12 @@ public class CreateUserCommand implements ActionCommand {
 
         User user = new User();
 
-        //user.setUser_id(Integer.parseInt(request.getParameter("user_id")));
         user.setUser_login(request.getParameter("user_login"));
         user.setUser_password(request.getParameter("user_password"));
         user.setUser_email(request.getParameter("user_email"));
         user.setUser_status(request.getParameter("user_status"));
 
         UserService userService = new UserServiceImpl();
-
 
         try {
             userService.addEntity(user);

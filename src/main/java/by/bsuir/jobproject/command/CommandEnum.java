@@ -2,10 +2,7 @@ package by.bsuir.jobproject.command;
 
 import by.bsuir.jobproject.command.impl.*;
 import by.bsuir.jobproject.command.impl.user.*;
-import by.bsuir.jobproject.command.impl.vacancy.CreateVacancyCommand;
-import by.bsuir.jobproject.command.impl.vacancy.DeleteVacancyCommand;
-import by.bsuir.jobproject.command.impl.vacancy.ReadAllVacanciesCommand;
-import by.bsuir.jobproject.command.impl.vacancy.UpdateVacancyCommand;
+import by.bsuir.jobproject.command.impl.vacancy.*;
 
 /**
  * Created by AR on 29.04.2017.
@@ -71,17 +68,17 @@ public enum CommandEnum {
 
     VIEW_VACANCIES {
         {
-            this.command = new ReadAllVacanciesCommand();
+            this.command = new VacancyListCommand();
         }
     },
     TO_CREATE_VACANCY {
         {
-       //     this.command = new ToCreateVacancyCommand();
+            this.command = new ToCreateVacancyCommand();
         }
     },
     TO_UPDATE_VACANCY {
         {
-     //       this.command = new ToUpdateVacancyCommand();
+            this.command = new ToUpdateVacancyCommand();
         }
     },
     CREATE_VACANCY {
