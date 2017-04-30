@@ -40,7 +40,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
                 if (preparedStatement != null) {
                     preparedStatement.close();
                 }
-                closeConnection();
+               // closeConnection();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -62,7 +62,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
                 if (preparedStatement != null) {
                     preparedStatement.close();
                 }
-                closeConnection();
+               // closeConnection();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -89,7 +89,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
             try {
                 if (preparedStatement != null)
                     preparedStatement.close();
-                closeConnection();
+               // closeConnection();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -122,7 +122,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
                     resultSet.close();
                 if (statement != null)
                     statement.close();
-                closeConnection();
+               // closeConnection();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -157,7 +157,7 @@ public class VacancyDAOImpl extends MySQLConnector implements CrudDAO<Vacancy> {
                     resultSet.close();
                 if (preparedStatement != null)
                     preparedStatement.close();
-                closeConnection();
+               // closeConnection();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

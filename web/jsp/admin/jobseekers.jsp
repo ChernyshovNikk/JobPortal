@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>Show All Users</title>
+    <title>Show All Jobseekers</title>
 </head>
 <body>
 
@@ -13,37 +13,37 @@
 <table border="1" cellpadding="7" cellspacing="1">
     <thead>
     <tr>
-        <th>User ID</th>
-        <th>User Login</th>
-        <th>User Password</th>
-        <th>User Email</th>
-        <th>User Status</th>
+        <th>Jobseeker ID</th>
+        <th>Jobseeker User ID</th>
+        <th>Jobseeker Lastname</th>
+        <th>Jobseeker Name</th>
+        <th>Jobseeker Status</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     </thead>
 
     <tbody>
-    <c:forEach items="${users}" var="jobseeker">
+    <c:forEach items="${jobseekers}" var="jobseeker">
         <tr>
+            <td><c:out value="${jobseeker.jobseeker_id}"/></td>
             <td><c:out value="${jobseeker.user_id}"/></td>
-            <td><c:out value="${jobseeker.user_login}"/></td>
-            <td><c:out value="${jobseeker.user_password}"/></td>
-            <td><c:out value="${jobseeker.user_email}"/></td>
-            <td><c:out value="${jobseeker.user_status}"/></td>
+            <td><c:out value="${jobseeker.jobseeker_lastname}"/></td>
+            <td><c:out value="${jobseeker.jobseeker_name}"/></td>
+            <td><c:out value="${jobseeker.jobseeker_status}"/></td>
 
             <td>
                 <form action="${pageContext.request.contextPath}/controller" method="POST">
-                    <input type="hidden" name="command" value="to_update_user">
-                    <input type="hidden" name="user_id" value="${jobseeker.user_id}">
+                    <input type="hidden" name="command" value="to_update_jobseeker">
+                    <input type="hidden" name="jobseeker_id" value="${jobseeker.jobseeker_id}">
                     <input value="Update" type="submit">
                 </form>
             </td>
 
             <td>
                 <form action="${pageContext.request.contextPath}/controller" method="POST">
-                    <input type="hidden" name="command" value="delete_user">
-                    <input type="hidden" name="user_id" value="${jobseeker.user_id}">
+                    <input type="hidden" name="command" value="delete_jobseeker">
+                    <input type="hidden" name="jobseeker_id" value="${jobseeker.jobseeker_id}">
                     <input value="Delete" type="submit">
                 </form>
             </td>
@@ -53,8 +53,8 @@
 </table>
 
 <form action="${pageContext.request.contextPath}/controller" method="POST">
-    <input type="hidden" name="command" value="to_create_user">
-    <input value="Add User" type="submit">
+    <input type="hidden" name="command" value="to_create_jobseeker">
+    <input value="Add Jobseeker" type="submit">
 </form>
 
 <jsp:include page="/jsp/common/_footer.jsp"></jsp:include>

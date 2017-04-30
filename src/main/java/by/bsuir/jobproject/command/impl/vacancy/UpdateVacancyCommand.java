@@ -23,7 +23,7 @@ public class UpdateVacancyCommand implements ActionCommand {
             vacancyService.getEntityById(vacancyId);
             Vacancy vacancy = vacancyService.getEntityById(vacancyId);
 
-            vacancy.setEmployer_id(Integer.parseInt(request.getParameter("company_id")));
+            vacancy.setEmployer_id(Integer.parseInt(request.getParameter("employer_id")));
             vacancy.setVacancy_name(request.getParameter("vacancy_name"));
             vacancy.setVacancy_requirements(request.getParameter("vacancy_requirements"));
             vacancy.setVacancy_payment(request.getParameter("vacancy_payment"));

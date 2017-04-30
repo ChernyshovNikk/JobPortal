@@ -3,7 +3,7 @@ package by.bsuir.jobproject.dao;
 
 import by.bsuir.jobproject.exception.DAOException;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public interface CrudDAO<T> {
@@ -14,7 +14,7 @@ public interface CrudDAO<T> {
 
     void updateEntity(T entity) throws DAOException;
 
-    List<T> getAllEntities() throws DAOException;
+    ArrayList<T> getAllEntities() throws DAOException;
 
     T getEntityById(int entity_id) throws DAOException;
 }

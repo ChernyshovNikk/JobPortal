@@ -1,5 +1,4 @@
-package by.bsuir.jobproject.command.impl.user;
-
+package by.bsuir.jobproject.command.impl.jobseeker;
 
 import by.bsuir.jobproject.command.ActionCommand;
 import by.bsuir.jobproject.exception.CommandException;
@@ -7,13 +6,14 @@ import by.bsuir.jobproject.util.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
 
-
-public class ToCreateUserCommand implements ActionCommand {
+/**
+ * Created by AR on 30.04.2017.
+ */
+public class ToCreateJobseekerCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) throws CommandException {
-        String page = ConfigurationManager.getProperty("path.page.add_user");
+        String page = ConfigurationManager.getProperty("path.page.add_jobseeker");
 
         return page;
     }
 }
-
