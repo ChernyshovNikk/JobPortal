@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.dao.impl;
 
+
 import by.bsuir.jobproject.dao.UserDAO;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.model.User;
@@ -12,9 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- * Created by AR on 15.04.2017.
- */
+
 public class UserDAOImpl extends MySQLConnector implements UserDAO {
 
     private final String INSERT_USER = "insert into user (user_login, user_password, user_email, user_status) values (?,?,?,?)";

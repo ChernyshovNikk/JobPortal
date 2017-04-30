@@ -1,14 +1,13 @@
 package by.bsuir.jobproject.command.impl;
 
+
 import by.bsuir.jobproject.command.ActionCommand;
 import by.bsuir.jobproject.exception.CommandException;
 import by.bsuir.jobproject.util.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by AR on 16.04.2017.
- */
+
 public class LogoutCommand implements ActionCommand {
 
     @Override

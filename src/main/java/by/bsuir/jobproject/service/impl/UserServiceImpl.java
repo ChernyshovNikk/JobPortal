@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.service.impl;
 
+
 import by.bsuir.jobproject.dao.impl.UserDAOImpl;
 import by.bsuir.jobproject.exception.DAOException;
 import by.bsuir.jobproject.exception.ServiceException;
@@ -8,9 +9,7 @@ import by.bsuir.jobproject.service.UserService;
 
 import java.util.ArrayList;
 
-/**
- * Created by AR on 15.04.2017.
- */
+
 public class UserServiceImpl implements UserService {
 
     private UserDAOImpl userDAO = new UserDAOImpl();

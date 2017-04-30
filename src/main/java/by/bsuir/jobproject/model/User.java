@@ -1,10 +1,9 @@
 package by.bsuir.jobproject.model;
 
+
 import java.io.Serializable;
 
-/**
- * Created by AR on 15.04.2017.
- */
+
 public class User implements Serializable {
 
     private int user_id;

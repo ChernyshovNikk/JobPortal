@@ -1,12 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  Vacancy: AR
-  Date: 27.04.2017
-  Time: 17:17
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Show All Vacancies</title>
@@ -28,8 +22,8 @@
         <th>Delete</th>
     </tr>
     </thead>
+
     <tbody>
-    <%--@elvariable id="vacancies" type="java.util.ArrayList"--%>
     <c:forEach items="${vacancies}" var="vacancy">
         <tr>
             <td><c:out value="${vacancy.vacancy_id}"/></td>
@@ -59,10 +53,12 @@
     </c:forEach>
     </tbody>
 </table>
+
 <form action="${pageContext.request.contextPath}/controller" method="POST">
     <input type="hidden" name="command" value="to_create_vacancy">
     <input value="Add Vacancy" type="submit">
 </form>
+
 <jsp:include page="/jsp/common/_footer.jsp"></jsp:include>
 
 </body>

@@ -1,11 +1,11 @@
 package by.bsuir.jobproject.model;
 
+
 import java.io.Serializable;
 
-/**
- * Created by AR on 19.03.2017.
- */
+
 public class Resume implements Serializable{
+
     private int resume_id;
     private int jobseeker_id;
     private int specialty_id;

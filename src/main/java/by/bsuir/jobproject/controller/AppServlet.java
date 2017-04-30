@@ -1,5 +1,6 @@
 package by.bsuir.jobproject.controller;
 
+
 import by.bsuir.jobproject.command.ActionCommand;
 import by.bsuir.jobproject.command.factory.ActionFactory;
 import by.bsuir.jobproject.exception.CommandException;
@@ -13,9 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by AR on 30.03.2017.
- */
+
 @WebServlet("/controller")
 public class AppServlet extends HttpServlet {
 

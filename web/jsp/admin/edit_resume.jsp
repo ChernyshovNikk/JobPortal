@@ -28,11 +28,31 @@
     </h2>
 
     <table border="1" cellpadding="7" cellspacing="1">
-        <tr><td>Resume ID:</td><td><input name="resume_id" type="text" class="form-control" value="<c:out value="${resume.resume_id}"/>" readonly="readonly"/></td><tr>
-        <tr><td>Jobseeker ID:</td><td><input name="jobseeker_id" type="text" class="form-control" value="<c:out value="${resume.jobseeker_id}"/>"/></td><tr>
-        <tr><td>Specialty ID:</td><td><input name="specialty_id" type="password" class="form-control" value="<c:out value="${resume.specialty_id}"/>"/></td><tr>
-        <tr><td>Skill ID:</td><td><input name="skill_id" type="text" class="form-control" value="<c:out value="${resume.skill_id}"/>"/></td><tr>
-        <tr><td>Resume Information:</td><td><input name="resume_information" type="text" class="form-control" value="<c:out value="${resume.resume_information}"/>"/></td><tr>
+        <tr>
+            <td>Resume ID:</td>
+            <td><input name="resume_id" type="text" class="form-control" value="<c:out value="${resume.resume_id}"/>"
+                       readonly="readonly"/></td>
+        <tr>
+        <tr>
+            <td>Jobseeker ID:</td>
+            <td><input name="jobseeker_id" type="text" class="form-control"
+                       value="<c:out value="${resume.jobseeker_id}"/>"/></td>
+        <tr>
+        <tr>
+            <td>Specialty ID:</td>
+            <td><input name="specialty_id" type="password" class="form-control"
+                       value="<c:out value="${resume.specialty_id}"/>"/></td>
+        <tr>
+        <tr>
+            <td>Skill ID:</td>
+            <td><input name="skill_id" type="text" class="form-control" value="<c:out value="${resume.skill_id}"/>"/>
+            </td>
+        <tr>
+        <tr>
+            <td>Resume Information:</td>
+            <td><input name="resume_information" type="text" class="form-control"
+                       value="<c:out value="${resume.resume_information}"/>"/></td>
+        <tr>
     </table>
 
     <c:if test="${resume != null}">
