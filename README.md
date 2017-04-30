@@ -1,3 +1,2 @@
-# JobPortal
-JavaEE Web Project
-fff
+# JobProject
+Java Web Project
