@@ -16,6 +16,9 @@
             <tr><td>Login:</td><td><input name="login" type="text"></td></tr>
             <tr><td>Password:</td><td><input name="password" type="password"></td></tr>
             <tr><td>Email:</td><td><input name="email" type="text"></td></tr>
+            <tr><td>Lastname:</td><td><input name="lastname" type="text"></td></tr>
+            <tr><td>Name:</td><td><input name="name" type="text"></td></tr>
+
             <tr><td><input value="Join!" type="submit"></td></tr>
         </table>
     </form>
